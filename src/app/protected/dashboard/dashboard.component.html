@@ -1,0 +1,14 @@
+<h1>Dashboard</h1>
+<hr>
+
+<p>
+    Esta página solo funciona si estás autenticado
+</p>
+
+<h4>User info</h4>
+<pre>{{ user | json }}</pre>
+
+<h4>User Session</h4>
+<pre>{{ userSession | json }}</pre>
+
+<button (click)="logout()">Logout</button>

@@ -3,7 +3,35 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // cognito: {
+  //   userPoolId: 'us-east-1_BViNLPAZW',
+  //   userPoolWebClientId: '7l58broj906ds4bmep13hf1iev',
+  // }
+
+  cognito: {
+    identityPoolId: "",
+    region: "us-east-1",
+    userPoolId: "us-east-1_BViNLPAZW",
+    userPoolWebClientId: "7l58broj906ds4bmep13hf1iev",
+
+    mandatorySignIn: false,
+
+    oauth: {
+      domain: "digital-application-new.auth.us-east-1.amazoncognito.com",
+      scope: ['phone', 'email', 'profile', 'openid', 'aws.cognito.signin.user.admin'],
+      redirectSignIn: "http://localhost:4201/dashboard",
+      redirectSignOut: "http://localhost:4201/auth",
+      responseType: 'code',
+      options: {
+        AdvancedSecurityDataCollectionFlag: false
+      }
+    },
+  },
+  Storage: {
+    bucket: "",
+    region: "us-east-1"
+  }
 };
 
 /*
